@@ -80,12 +80,13 @@ WSGI_APPLICATION = 'SegmentTracker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dbSegTracker',
-		'USER': 'adminSegTracker',
-		'PASSWORD': 'passSegTracker',
+        'NAME': 'SegmentTracker$dbSegTracker',
+		'USER': 'SegmentTracker', # AWS: adminSegTracker
+		'PASSWORD': 'mysqlRootPass', #'AWS: passSegTracker',
 		#'HOST': 'localhost',
-		'HOST': 'mysqlinstance.cvsggno7cqqf.us-west-2.rds.amazonaws.com',
-		'PORT': '3306',
+		#'HOST': 'mysqlinstance.cvsggno7cqqf.us-west-2.rds.amazonaws.com',
+		'HOST': 'SegmentTracker.mysql.pythonanywhere-services.com',
+		#'PORT': '3306',
     }
 }
 
